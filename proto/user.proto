@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package proto;
+
+option go_package = "./proto";
+
+// Declare a service for each controller you have
+service UserService {
+  // Declare an rpc for each method that is called via gRPC
+  rpc GetSingleUser (IdUser) returns (UserData);
+
+}
+
+message IdUser {
+  int32 id = 1;
+}
+
+message UserData {
+   string name = 1;
+   int32 id = 2;
+   string email = 3;
+}
