@@ -1,8 +1,8 @@
 package main
 
 import (
-	pb "belajarGrpcGo/proto"
-	"belajarGrpcGo/server/user"
+	pb "belajarGrpcGo/protos"
+	"belajarGrpcGo/server/cmd/user"
 	"fmt"
 	"log"
 	"net"

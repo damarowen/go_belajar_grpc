@@ -7,7 +7,7 @@ import (
 	"log"
 	"time"
 
-	pb "belajarGrpcGo/proto"
+	pb "belajarGrpcGo/protos"
 
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials/insecure"
@@ -33,7 +33,7 @@ func main() {
 	defer cancel()
 
 	idUser := 1
-	r, err := c.GetSingleUser(ctx, &pb.IdUser{Id: int32(idUser)})
+	r, err := c.GetSingleUser(ctx, &pb.ReqIdUser{Id: int32(idUser)})
 	if err != nil {
 		log.Fatalf("could not found user: %v", err)
 	}
